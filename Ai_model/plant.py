@@ -12,7 +12,8 @@ app=initialize_app(cred,{
     'databaseURL':'https://fertilizer-predictor-default-rtdb.firebaseio.com/'
 })
 ref=db.reference("/fertilizer/")
-
+'''loading   .....'''
+exec(open("LCDload.py").read())
 
 
 '''set the data 
@@ -78,6 +79,8 @@ output={
 }
 fertilizer_ref=db.reference("/fertilizer")
 fertilizer_ref.update(output)
+'''done processing '''
+exec(open("LCDDone.py").read())
 print("The best fertilizer to use is  ", new_sample_pred)
 
 
