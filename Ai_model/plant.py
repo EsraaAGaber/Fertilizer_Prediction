@@ -1,6 +1,6 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
+from lcd import start
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
@@ -12,7 +12,8 @@ app=initialize_app(cred,{
     'databaseURL':'https://fertilizer-predictor-default-rtdb.firebaseio.com/'
 })
 ref=db.reference("/fertilizer/")
-
+'''loading   .....'''
+start("loading.....",1)
 
 
 '''set the data 
@@ -78,7 +79,15 @@ output={
 }
 fertilizer_ref=db.reference("/fertilizer")
 fertilizer_ref.update(output)
+
+'''done processing '''
+'''exec(open("LCDDone.py").read())'''
+
+
+start (new_sample_pred,1)
 print("The best fertilizer to use is  ", new_sample_pred)
+
+
 
 
 
