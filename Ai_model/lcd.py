@@ -9,7 +9,7 @@ LCD_D4 =23
 LCD_D5 = 24
 LCD_D6 = 25
 LCD_D7 = 12
-LCD_BACKLIGHT = 9
+LCD_BACKLIGHT = 26
 
 # Define some LCD constants
 LCD_WIDTH = 16  # Maximum characters per line
